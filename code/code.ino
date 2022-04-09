@@ -402,20 +402,20 @@ void loop() {
 
   void avoidLeft(){ 
     // If the car's left side is too close to a wall, it will turn right and move forward.
-    right(1000);
+    right(1500);
     }
 
 
   void avoidRight(){ 
     // If the car's right side is too close to a wall, it will turn left and move forward.
-    left(1000);
+    left(1500);
     }
 
 
   void avoidBackupTurnAround(){ 
     // If the front center of the car is too close to a wall, it will drive backwards and turn around.
     backward(100);
-    right(1000);
+    right(1500);
     }
     
 
@@ -439,7 +439,7 @@ void loop() {
   void avoidRightStraight(){ 
     // The car will straigthen forward when its front-left is about to be close to a wall.
     right(1000);
-    forward(1000);
+    forward(100);
     }
 
 
@@ -452,7 +452,7 @@ void loop() {
 
   void goForward(){
     // If the car's rear end gets too close to a wall while backing up, it will move forward.
-    forward(1000);
+    forward(100);
   }
 
 
@@ -461,16 +461,16 @@ void loop() {
     if (distanceFC() < 8 && distanceLSS(), distanceRSS() > 10){
       avoidBackupTurnAround();
     }
-    else if (distanceFL() < 10){
+    else if (distanceFL() < 7){
       avoidRightStraight();
     }
-    else if (distanceFR() < 10){
+    else if (distanceFR() < 7){
       avoidLeftStraight();
     }
-    else if (distanceLSS() < 10){
+    else if (distanceLSS() < 7){
       avoidLeft();
     }
-    else if (distanceRSS() < 10){
+    else if (distanceRSS() < 7){
       avoidRight();
     }
     else if (distanceFC() < 8 && distanceLSS() < 8){
