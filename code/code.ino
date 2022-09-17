@@ -15,7 +15,7 @@
 // Left turn signal setup
 
   int frontLeftTurnSignal = 7;
-  int rearLeftTurnSignal = 46;
+  int rearLeftTurnSignal = 50;
 
 
 // Right turn signal setup
@@ -32,13 +32,13 @@
     
   // Front left distance sensor
   
-    #define trigPinFL 6
-    #define echoPinFL 5
+    #define trigPinFL 34 
+    #define echoPinFL 35 
     
   // Front right distance sensor
 
-    #define trigPinFR 34
-    #define echoPinFR 35
+    #define trigPinFR 6 
+    #define echoPinFR 5 
   
   // Left side skirt distance sensor
 
